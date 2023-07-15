@@ -16,6 +16,10 @@ void main(){
      05. list means collection of multiple data similar to array
      06. Map means collection of multiple data similar to array but each value
          with specific key.
+     07. SET means collection of multiple data similar to array but we cannot keep duplicate value
+         and value cannot be mixed type that is whether all value must be string type or int type.
+         [note: SET is an unorder collection of data.]
+
   */
 
   var x=20;
@@ -37,14 +41,14 @@ void main(){
   bool gender_male =true;
   print(gender_male); // Output
 
-
+  ///List
   var fruit_busket=['Mango', 'Apple', 'Jackfruit'];
   print(fruit_busket);
   print(fruit_busket[0]);
   print(fruit_busket[1]);
   print(fruit_busket[2]);
 
-
+  ///Map
   var user={
     'id': 1,
     'name': 'Shakibul',
@@ -56,6 +60,31 @@ void main(){
   print(user['name']);
   print(user['nationality']);
   print(user['email']);
+
+
+  var people=new Map();
+  people['user1'] = 'Shakib';
+  people['user2'] = 'pias';
+  people['user3'] = 'john';
+
+  people.addAll({'user4':'Karim', 'user5':'Rahim'});
+  print(people);
+
+
+  /// SET
+  var laptop = <String>{'Macbook', 'Asus', 'Hp', 'Dell'};
+  laptop.add('Macbook'); // duplicate value, so it will not add or show in the output
+  print(laptop);
+
+  var product_id = <int>{1,2,3,4,5};
+  print(product_id);
+
+  var brand={'Apple', 'Google','Microsoft','Ubisoft'};
+  print(brand);
+  print(brand.elementAt(1));
+  print(brand.length);
+  brand.clear();
+  print(brand);
 
 
   /*
@@ -193,5 +222,6 @@ void main(){
   chocolate.removeAt(0); // remove by index number
   chocolate.removeLast(); // remove the last item
   print(chocolate);
+
 
 }
