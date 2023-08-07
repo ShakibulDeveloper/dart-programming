@@ -20,4 +20,8 @@ void main(){
   print(studentMap.length);
   print(studentMap.entries);
 
+  studentMap.addAll({5:'Karim', 6: 'Jamil'});
+  studentMap.remove(1); // removed using key
+  print(studentMap);
+
 }
