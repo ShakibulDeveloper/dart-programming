@@ -8,7 +8,7 @@ void main(){
   };
 
   double averageMark = totalMark / studentMarks.length;
-  print("Student's average grade: ${averageMark.toStringAsFixed(0)}");
+  print("Student's average grade: ${averageMark.toStringAsFixed(1)}");
   print("Rounded average: ${averageMark.round()}");
   if (averageMark.round() >= 70) {
     print('Passed');
